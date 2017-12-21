@@ -48,7 +48,8 @@ quota = {{ mongodb_conf_quota | to_nice_json }}
 #nohints = true
 
 # Enable the HTTP interface (Defaults to port 28017).
-httpinterface = {{ mongodb_conf_httpinterface | to_nice_json }}
+# Changed in version 3.6: MongoDB 3.6 removes the deprecated HTTP interface and REST API to MongoDB.
+# httpinterface = {{ mongodb_conf_httpinterface | to_nice_json }}
 
 # Turns off server-side scripting.  This will result in greatly limited
 # functionality
